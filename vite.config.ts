@@ -4,6 +4,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	ssr: {
-		noExternal: ['three', 'troika-three-text', 'postprocessing']
+		noExternal: ['three', 'troika-three-text', 'postprocessing', 'lodash']
+	},
+	optimizeDeps: {
+		include: ['lodash']
 	}
 });

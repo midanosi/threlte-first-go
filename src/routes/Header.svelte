@@ -43,11 +43,13 @@
 				<a href="/outline">Outline</a>
 			</li>
 			<li
-				aria-current={$page.url.pathname.startsWith('/outlineInMaze')
+				aria-current={$page.url.pathname.startsWith(
+					'/outline_in_maze'
+				)
 					? 'page'
 					: undefined}
 			>
-				<a href="/outlineInMaze">Outline In Maze</a>
+				<a href="/outline_in_maze">Outline In Maze</a>
 			</li>
 			<li
 				aria-current={$page.url.pathname.startsWith('/rapier')

@@ -18,21 +18,16 @@
 	import { dev } from '$app/environment';
 	import theatreState from './state.json';
 
-	const route = [
-		[0, 1, -3],
-		[0, 1, 1],
-		[-3, 1, 1],
-		[-3, 1, 4],
-		[-2, 1, 4],
-		[-2, 1, 5],
-		[-5, 1, 5],
-		[-5, 1, -3]
-	];
-	// const elasticY = tweened(position.y, {
-	// 	duration: 1000,
-	// 	easing: quintInOut,
-	// 	delay: 7500
-	// });
+	// const route = [
+	// 	[0, 1, -3],
+	// 	[0, 1, 1],
+	// 	[-3, 1, 1],
+	// 	[-3, 1, 4],
+	// 	[-2, 1, 4],
+	// 	[-2, 1, 5],
+	// 	[-5, 1, 5],
+	// 	[-5, 1, -3]
+	// ];
 
 	let outlinedCube;
 </script>
@@ -49,7 +44,10 @@
 			<!-- cube (TODO change to walking human) -->
 			<T.Mesh position.z={-3} position.y={1} bind:ref={outlinedCube}>
 				<Project name="Project A" config={{ state: theatreState }}>
-					<Sheet name="Sheet A" autoPlay loop>
+					<Sheet
+						name="Sheet A"
+						autoPlay={{ iterationCount: Infinity }}
+					>
 						<!-- <Editable name="Editable A" /> -->
 						<Editable name="Box / Mesh" transform controls />
 					</Sheet>

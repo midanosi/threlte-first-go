@@ -48,7 +48,6 @@
 						name="Sheet A"
 						autoPlay={{ iterationCount: Infinity }}
 					>
-						<!-- <Editable name="Editable A" /> -->
 						<Editable name="Box / Mesh" transform controls />
 					</Sheet>
 				</Project>

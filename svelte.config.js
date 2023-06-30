@@ -12,7 +12,10 @@ const config = {
 	},
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: seqPreprocessor([vitePreprocess(), preprocess()])
+	preprocess: seqPreprocessor([vitePreprocess(), preprocess()]),
+	ssr: {
+		noExternal: ['three']
+	}
 };
 
 export default config;

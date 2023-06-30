@@ -24,7 +24,6 @@
 	const p3 = new Vector3();
 	const c3 = new Vector3();
 
-	let distanceBetweenPlayerAndCube = 0;
 
 	useFrame(() => {
 		if (!playerMesh) return;
@@ -37,17 +36,6 @@
 			hard: !positionHasBeenSet
 		});
 		if (!positionHasBeenSet) positionHasBeenSet = true;
-
-		const newDistanceBetweenPlayerAndCube = Math.sqrt(
-			(p3.x - c3.x) ** 2 + (p3.z - c3.z) ** 2
-		);
-
-		if (
-			distanceBetweenPlayerAndCube !== newDistanceBetweenPlayerAndCube
-		) {
-			distanceBetweenPlayerAndCube = newDistanceBetweenPlayerAndCube;
-		}
-		playerMesh;
 	});
 
 	const { size } = useThrelte();
